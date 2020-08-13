@@ -4,7 +4,7 @@ import List from './components/List'
 import InputForm from './components/InputForm'
 
 const containerStyle = {
-
+  textDecoration: 'none'
 }
 
 
