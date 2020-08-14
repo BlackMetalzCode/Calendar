@@ -1,13 +1,13 @@
 import React from 'react';
 
-const List = ({list, deleteItem}) => {
+const List = ({list, deleteItem, onClick}) => {
   return (
     <div>
       <ul>
         {list.map((item) => {
           return(
-          <li key={item.id}>
-          {item.value}
+          <li key={item.id} >
+          <p onClick={() => onClick(item.id)}>{item.value}</p>
           <button onClick={() => deleteItem(item.id)}>X</button>
           </li>
           )
@@ -18,4 +18,4 @@ const List = ({list, deleteItem}) => {
 };
 
 
-export default React.memo(List);
+export default (List);
